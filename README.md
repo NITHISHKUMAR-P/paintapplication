@@ -90,7 +90,7 @@ Publish the website in the given URL.
         let csize = 20;
         let sqsize = 50;
         let tsize = 30;
-        let tatakae = "black";
+        let st = "black";
 
         function size() {
             if (shape == 1 || shape == 2) {
@@ -108,7 +108,7 @@ Publish the website in the given URL.
         }
 
         function change_color(element) {
-            tatakae = element.style.background;
+            st = element.style.background;
         }
 
         function showCoords(event) {
@@ -120,25 +120,25 @@ Publish the website in the given URL.
             if (shape == 1) {
                 ctx.beginPath();
                 ctx.arc(x, y, csize, 0, 2 * Math.PI);
-                ctx.fillStyle = tatakae;
+                ctx.fillStyle = st;
                 ctx.fill();
             }
             if (shape == 2) {
                 ctx.beginPath();
                 ctx.arc(x, y, csize, 0, 2 * Math.PI);
-                ctx.strokeStyle = tatakae;
+                ctx.strokeStyle = st;
                 ctx.stroke();
             }
             if (shape == 3) {
                 ctx.beginPath();
                 ctx.rect(x - (sqsize / 2), y - (sqsize / 2), sqsize, sqsize);
-                ctx.fillStyle = tatakae;
+                ctx.fillStyle = st;
                 ctx.fill();
             }
             if (shape == 4) {
                 ctx.beginPath();
                 ctx.rect(x - (sqsize / 2), y - (sqsize / 2), sqsize, sqsize);
-                ctx.strokeStyle = tatakae;
+                ctx.strokeStyle = st;
                 ctx.stroke();
             }
             if (shape == 6) {
@@ -147,7 +147,7 @@ Publish the website in the given URL.
                 ctx.lineTo(x - (tsize / 2), y - (tsize * 0.86602));
                 ctx.lineTo(x + (tsize / 2), y - (tsize * 0.86602));
                 ctx.lineTo(x, y)
-                ctx.strokeStyle = tatakae
+                ctx.strokeStyle = st
                 ctx.stroke();
             }
             if (shape == 5) {
@@ -155,7 +155,7 @@ Publish the website in the given URL.
                 ctx.moveTo(x, y);
                 ctx.lineTo(x - (tsize / 2), y - (tsize * 0.86602));
                 ctx.lineTo(x + (tsize / 2), y - (tsize * 0.86602));
-                ctx.fillStyle = tatakae
+                ctx.fillStyle = st
                 ctx.fill();
             }
 
